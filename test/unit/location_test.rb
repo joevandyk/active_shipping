@@ -231,4 +231,8 @@ class LocationTest < ActiveSupport::TestCase
     assert_equal @location, another_location
     refute_equal @location, Location.new({})
   end
+
+  test "#== works with nil" do
+    refute_equal @location, nil
+  end
 end

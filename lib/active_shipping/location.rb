@@ -160,6 +160,7 @@ module ActiveShipping #:nodoc:
     end
 
     def ==(other)
+      return false if !other.respond_to?(:to_hash)
       to_hash == other.to_hash
     end
   end
